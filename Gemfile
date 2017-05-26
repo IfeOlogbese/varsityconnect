@@ -25,6 +25,9 @@ gem 'haml'
 # mongoid for database
 gem 'mongoid', '~> 6.0'
 
+# devise for authentication
+gem 'devise'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
