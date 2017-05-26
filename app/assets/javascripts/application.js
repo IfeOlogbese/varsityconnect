@@ -11,7 +11,20 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
+//= require bootstrap
 //= require jquery_ujs
+//= require bindWithDelay
+//= require jquery.datetimepicker
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  $("#event_when").datetimepicker({
+    format:'Y/m/d H:i'
+  });
+  $("#user_dob").datetimepicker({
+    timepicker:false,
+    format:'Y/m/d',
+    maxDate:'0'
+  });
+});
