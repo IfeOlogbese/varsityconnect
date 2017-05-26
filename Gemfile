@@ -28,6 +28,11 @@ gem 'mongoid', '~> 6.0'
 # devise for authentication
 gem 'devise'
 
+# for uploading files
+gem 'carrierwave', '~> 1.0'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem 'mini_magick', :git => 'https://github.com/minimagick/minimagick.git'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
