@@ -1,8 +1,6 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Posts</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Attachment</th>
@@ -17,10 +15,9 @@
       <tr>
         <td><%= post.attachment %></td>
         <td><%= post.content %></td>
-        <td><%= post.user %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', post, class: 'post-btn btn btn-primary' %></td>
+        <td><%= link_to 'Edit', edit_post_path(post), class: 'post-btn btn btn-warning' %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, class: 'post-btn btn btn-danger', data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +25,4 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path, class: 'post-btn btn btn-primary' %>
