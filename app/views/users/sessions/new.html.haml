@@ -1,0 +1,27 @@
+.user-login-form
+  %h2.user-login-form-heading
+    Sign in
+
+  %hr
+
+  .user-login-form-img
+    = image_tag('login.png', align: 'middle')
+
+  = form_for resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-horizontal'} do |f|
+    .form-group
+      = f.label :email, for: 'user-email', class: "control-label"
+      = f.email_field :email, id: 'user-email', placeholder: 'Enter Email', autofocus: true, class: 'form-control'
+
+    .form-group
+      = f.label :password, for: 'user-password', class: "control-label"
+      = f.password_field :password, id: 'user-password', placeholder: 'Enter Password', autocomplete: "off", class: 'form-control'
+
+    - if devise_mapping.rememberable?
+      .form-group
+        = f.check_box :remember_me
+        = f.label :remember_me
+
+    .form-group
+      = f.submit "Log in", class: 'btn btn-primary'
+
+  = render "users/shared/links"

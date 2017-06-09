@@ -1,0 +1,11 @@
+- if @post.present?
+  %p
+    %strong Attachment:
+    = @post.attachment
+  %p
+    %strong Content:
+    = @post.content
+  %p
+    %strong User:
+  = link_to 'Edit', edit_post_path(@post), class: 'post-btn btn btn-primary'
+  = link_to 'Back', posts_path, class: 'post-btn btn btn-primary'
