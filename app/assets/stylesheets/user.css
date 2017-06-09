@@ -1,0 +1,19 @@
+.user-login-form{
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.user-login-form-heading{
+  text-align: center;
+}
+
+.user-login-form-img{
+  text-align: center;
+}
+
+.user-login-form-img > img{
+  border-radius: 100%;
+  width: 80px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
