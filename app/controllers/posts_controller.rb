@@ -64,7 +64,11 @@ class PostsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
-      @post = Post.find(params[:id])
+      @post = current_user.posts.find(params[:id])
+
+      if @post.nil?
+        flash.now[:alert] = 'Post couldn\'t be found'
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
